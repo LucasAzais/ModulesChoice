@@ -2,5 +2,5 @@ package moduleschoice
 
 class ModuleController {
 
-    def index() { }
+    def scaffold = true
 }
