@@ -2,17 +2,21 @@ package moduleschoice
 
 class Module {
 	
-	def sequence
-	def title
-	def description
-	def requirements
-	def hasMany = [applications : Application]
-	def belongsTo = [headTeacher : Teacher]
+	int sequence
+	String title
+	String description
+	List<Module> requirements
+	static hasMany = [applications : Application]
+	static belongsTo = [headTeacher : Teacher]
 	
 	String toSring(){
-		
+		"$title" + " " + "(Séquence : $sequence)"
 	}
 
     static constraints = {
+		title(blank : false)
+		sequence(min : 1, max : 7)
+		description(blank : false)
+		
     }
 }
