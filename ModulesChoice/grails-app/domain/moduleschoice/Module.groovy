@@ -8,6 +8,10 @@ class Module {
 	def requirements
 	def hasMany = [applications : Application]
 	def belongsTo = [headTeacher : Teacher]
+	
+	String toSring(){
+		
+	}
 
     static constraints = {
     }
