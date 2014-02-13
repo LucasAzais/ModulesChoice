@@ -14,6 +14,10 @@ class Application {
 		student.getName()
 	}
 	
+	String getModuleName(){
+		module.getTitle()
+	}
+	
 	static constraints = {
 		choice(min:1,max:2)
 		preference(min:1,max:7)

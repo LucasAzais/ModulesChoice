@@ -16,11 +16,13 @@ class Module {
 	}
 	
 	void addApplication(Application app){
-		
+		this.addToApplication(app)
 	}
 	
 	void removeApplication(String studentName){
-		
+		for(Application a : applications){
+			if(a.getStudentName()==studentName) applications.remove(a)
+		}
 	}
 
     static constraints = {
