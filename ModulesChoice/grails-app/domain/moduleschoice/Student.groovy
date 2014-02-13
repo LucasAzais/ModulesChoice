@@ -10,6 +10,16 @@ class Student {
 		"$surname" + " $name"
 	}
 	
+	void addApplication(int choice, int preference, Module module){
+		
+	}
+	
+	void removeApplication(String moduleName){
+		
+	}
+	
+	
+	
     static constraints = {
 		surname(blank : false)
 		name(blank : false)
