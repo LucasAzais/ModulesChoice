@@ -1,12 +1,14 @@
 package moduleschoice
 
+import java.util.List;
+
 class Module {
 	
 	int sequence
-	String group
-	String id
 	String title
 	String description
+	String department
+	String ensicaName
 	List<Module> requirements
 	static hasMany = [applications : Application]
 	static belongsTo = [headTeacher : Teacher]
@@ -16,7 +18,7 @@ class Module {
 	}
 	
 	void addApplication(Application app){
-		this.addToApplication(app)
+		this.addToApplications(app)
 	}
 	
 	void removeApplication(String studentName){
@@ -27,10 +29,11 @@ class Module {
 
     static constraints = {
 		title(blank : false)
-		group(blank : false)
-		id(blank : false)
 		sequence(min : 1, max : 7)
+		department(blank:false)
+		ensicaName(blank:false)
 		description(blank : false)
-		
+				
     }
 }
+
