@@ -24,15 +24,20 @@ td {
 </style>
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-		</script>
+	
+</script>
 <script>
-		$(document).ready(function(){
-  		$("td").click(function(){
-  			$(this).parent().children().css({"background-color":"#cccccc"});
-  			$(this).css({"background-color":"#00ff00"});
- 		 });
+	$(document).ready(function() {
+		$("td").click(function() {
+			$(this).parent().children().css({
+				"background-color" : "#cccccc"
+			});
+			$(this).css({
+				"background-color" : "#00ff00"
+			});
 		});
-		</script>
+	});
+</script>
 </head>
 <body>
 	<table>
@@ -51,13 +56,13 @@ td {
 						<g:each var="j" in="${(1..nbrByGroups[i-1])}">
 							<g:if test="${modules[m].sequence==k}">
 								<g:if test="${modules[m].department.equals(groups[i-1])}">
-									<td>
+									<td id="${modules[m].ensicaName}">
 										${modules[m].title}
 									</td>
 									<%m++%>
 								</g:if>
 								<g:else>
-									<td></td>
+									<td id="0"></td>
 								</g:else>
 							</g:if>
 						</g:each>
