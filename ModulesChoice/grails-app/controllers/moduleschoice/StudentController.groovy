@@ -14,8 +14,9 @@ class StudentController {
 		[modules : Module.findAll(), nbrOfSequences : maxSeq];
 	}
 	
-	def setChoice(Module module ,int choice){
+	def setChoice(){
 		def student = Student.get(session.id)
-		student.setChoice(module, choice)
+		student.addApplication(session.choice.toInteger(), session.preference.toInteger(), Module.findByTitle(session.module))
 	 }
+	
 }
