@@ -16,7 +16,7 @@ class StudentController {
 	
 	def setChoice(){
 		def student = Student.get(session.id)
-		student.addApplication(session.choice.toInteger(), session.preference.toInteger(), Module.findByTitle(session.module))
+		student.addApplication(params.choice.toInteger(), params.preference.toInteger(), Module.findByTitle(params.module))
 	 }
 	
 }
