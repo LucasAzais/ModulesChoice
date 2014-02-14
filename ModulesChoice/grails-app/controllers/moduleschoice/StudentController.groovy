@@ -19,4 +19,15 @@ class StudentController {
 		student.addApplication(params.choice.toInteger(), params.preference.toInteger(), Module.findByTitle(params.module))
 	 }
 	
+	def quit(){
+		def student = Student.get(session.id) 
+		for(Application a : student.hasMany){
+			Module.getByName(a.getModuleName()).addApplication(a)
+		}
+	}
+	
+	
+	
+	
+	
 }
