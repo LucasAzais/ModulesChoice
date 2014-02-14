@@ -1,6 +1,6 @@
 package moduleschoice
 
-import java.Export
+//import java.Export
 import java.util.ArrayList;
 
 class ModuleController {
@@ -24,6 +24,6 @@ class ModuleController {
 			eleves.add(eleve);
 		}
 	}
-	def exp = new Export().exportExcel(module.getTitle(),eleves)
+	//def exp = new Export().exportExcel(module.getTitle(),eleves)
 }
 

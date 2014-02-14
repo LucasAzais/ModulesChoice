@@ -4,15 +4,16 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-
+/*
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-
+*/
 public class Export {
+	/*
 
 	public void exportExcel(String moduleName, ArrayList<ArrayList<String>> eleves) {		
 		HSSFWorkbook workbook = new HSSFWorkbook();
@@ -93,4 +94,5 @@ public class Export {
 		}
 	}
 
+*/
 }
