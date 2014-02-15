@@ -10,9 +10,10 @@ class Student {
 		"$surname" + " $name"
 	}
 
-	void addApplication(int _choice, int _preference, Module _module){
-		Application app =new Application(choice:_choice,preference : _preference)
-		app.addToModule(_module)
+	void addApplication(int _choice, int _preference,String _module){
+		Application app = new Application(choice:_choice,preference : _preference)
+		app.module = Module.findByTitle(_module)
+		app.student = this
 		choices.add(app)
 	}
 

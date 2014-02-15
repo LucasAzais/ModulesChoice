@@ -4,21 +4,20 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-/*
+
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFFont;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
-*/
+ 
 public class Export {
-	/*
 
 	public void exportExcel(String moduleName, ArrayList<ArrayList<String>> eleves) {		
 		HSSFWorkbook workbook = new HSSFWorkbook();
 		HSSFSheet sheet = workbook.createSheet(moduleName+" Candidatures");
-		
+
 		HSSFFont bold = workbook.createFont();
 		bold.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
 		bold.setFontHeightInPoints((short) 12);
@@ -28,7 +27,7 @@ public class Export {
 		style.setBorderTop(HSSFCellStyle.BORDER_MEDIUM);
 		style.setBorderRight(HSSFCellStyle.BORDER_MEDIUM);
 		style.setBorderLeft(HSSFCellStyle.BORDER_MEDIUM);
-		
+
 		HSSFFont bold1 = workbook.createFont();
 		bold1.setBoldweight(HSSFFont.BOLDWEIGHT_BOLD);
 		bold1.setFontHeightInPoints((short) 10);
@@ -38,13 +37,13 @@ public class Export {
 		style1.setBorderTop(HSSFCellStyle.BORDER_MEDIUM);
 		style1.setBorderRight(HSSFCellStyle.BORDER_MEDIUM);
 		style1.setBorderLeft(HSSFCellStyle.BORDER_MEDIUM);
-		
+
 		HSSFCellStyle style2 = workbook.createCellStyle();
 		style2.setBorderBottom(HSSFCellStyle.BORDER_THIN);
 		style2.setBorderTop(HSSFCellStyle.BORDER_THIN);
 		style2.setBorderRight(HSSFCellStyle.BORDER_THIN);
 		style2.setBorderLeft(HSSFCellStyle.BORDER_THIN);
-		
+
 		HSSFRow row0 = sheet.createRow(0);
 		Cell cell0 = row0.createCell(0);
 		cell0.setCellValue("Liste des candidats de   ");
@@ -65,7 +64,7 @@ public class Export {
 		Cell cell4 = row1.createCell(3);
 		cell4.setCellValue("Preference  ");
 		cell4.setCellStyle(style1);
-		
+
 		for(int i=0;i<eleves.size();i++){
 			HSSFRow row2 = sheet.createRow(3+i);
 			for(int j=0;j<4;j++) {
@@ -78,15 +77,15 @@ public class Export {
 		sheet.autoSizeColumn(1);
 		sheet.autoSizeColumn(2);
 		sheet.autoSizeColumn(3);
-		
-		
+
+
 		try {
 		    FileOutputStream out =
 		            new FileOutputStream(new File(moduleName+".xls"));
 		    workbook.write(out);
 		    out.close();
 		    System.out.println("Excel written successfully..");
-		     
+
 		} catch (FileNotFoundException e) {
 		    e.printStackTrace();
 		} catch (IOException e) {
@@ -94,5 +93,5 @@ public class Export {
 		}
 	}
 
-*/
+
 }

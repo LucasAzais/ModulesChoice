@@ -4,10 +4,11 @@ class Application {
 
 	int choice
 	int preference
-	static belongsTo = [student: Student, module : Module]
+	static belongsTo = [student: Student]
+	static hasOne = [module : Module]
 	
 	String toString(){
-		student.toString() + " choice number ${choice} is " + module.toString()
+		student.toString() + "'s choice number ${choice} is " + module.toString()
 	}
     
 	String getStudentName(){
