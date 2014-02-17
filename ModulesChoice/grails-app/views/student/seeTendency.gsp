@@ -1,21 +1,63 @@
 <h1>SeeTendency:</h1>
-	
-<table  border="1" style="width: 300px">
+<p>
+	${params.newData}
+</p>
+<table border="1" style="width: 300px">
 	<thead>
 		<tr>
-			<th>poney</th>
-			<th>poney Advanced</th>
+			<g:each in="${params.moduleList}">
+				<th>
+					${it.toString()}
+				</th>
+			</g:each>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>
-				${params.poney}
-			</td>
-			<td>
-				${params.(poney_advanced)}
-			</td>
+			<g:each in="${params.data}">
+				<td>
+					${it.toString()}
+				</td>
+			</g:each>
 		</tr>
 	</tbody>
 </table>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load('visualization', '1', {
+		packages : [ 'corechart' ]
+	});
+</script>
+<script type="text/javascript">
+	function drawVisualization() {
+		// Create and populate the data table.
+
+		 var data = google.visualization.arrayToDataTable([
+                                                          ["",'poney (Sequence : 1)',' poneyAdvanced (Sequence : 2)', 'barbe a papa (Sequence : 6)'],
+                                                          [,3, 2, 1]
+                                                         ]);
+		
+		// Create and draw the visualization.
+		new google.visualization.BarChart(document
+				.getElementById('visualization')).draw(data, {
+			title : "Tendency bar chart",
+			width : 600,
+			height : 400,
+			vAxis : {
+				title : "Number of applicants"
+			}
+		});
+	}
+
+	google.setOnLoadCallback(drawVisualization);
+</script>
+</head>
+<body style="font-family: Arial; border: 0 none;">
+	<div id="visualization" style="width: 600px; height: 400px;"></div>
+</body>
 </html>

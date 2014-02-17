@@ -138,6 +138,7 @@ class StudentController {
 
 	def setChoice(){
 		def _student = Student.findByName(params.user)
+		//TODO check requirement
 		_student.addApplication(params.choice.toInteger(), params.preference.toInteger(), params.module)
 		_student.save()
 		render "Creation done"
@@ -145,9 +146,22 @@ class StudentController {
 	}
 
 	def seeTendency(){
+		println Module.findAll().toArray()
+		params.moduleList = Module.findAll().toArray()
+		println "\t"+params.moduleList.toString()
+		ArrayList<String[]> newData = new ArrayList<String[]>()
+		newData.add(["",0])
+		ArrayList<Integer> dataApplicant = new ArrayList<Integer>()
 		for(Module m : Module.findAll()){
-			params.(m.getTitle()) = m.applications.size()
+			println "\t\t\t"+m.toString()
+			//params.(m.getTitle()) = m.applications.size()
+			dataApplicant.add(m.applications.size())
+			newData.add([m.getTitle(),m.applications.size()])
 		}
+		params.data = dataApplicant.toArray()
+		params.newData = newData
+		println "\t\t"+params.data.toString()
+		println "new data format"+newData.toString()
 		return params
 	}
 }

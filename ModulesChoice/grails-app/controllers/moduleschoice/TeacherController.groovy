@@ -190,7 +190,7 @@ class TeacherController {
 
 		try {
 			FileOutputStream out =
-					new FileOutputStream(new File('web-app/tmpfiles/'+params.module+".xls"));
+					new FileOutputStream(new File('web-app/tmpfiles/'+params.module+'.xls'));
 			workbook.write(out);
 			out.close();
 			System.out.println("Excel written successfully..");
@@ -200,7 +200,15 @@ class TeacherController {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return [fileName:'web-app/tmpfiles/'+params.module+".xls"]
+		return [fileName:params.module]
 	}
 
-}
+	def download = {
+		def file = new File('web-app/tmpfiles/'+params.module+'.xls'); //<-- you'll probably want to pass in the file name dynamically with the 'params' map
+		response.setContentType("application/excel")
+		response.setHeader("Content-disposition", "attachment;filename=${file.getName()}")
+		response.outputStream << file.newInputStream()
+	}
+
+	
+	}
