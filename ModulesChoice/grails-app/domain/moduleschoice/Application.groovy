@@ -5,6 +5,7 @@ class Application {
 	int choice
 	int preference
 	static belongsTo = [student: Student, module : Module]
+
 	
 	String toString(){
 		student.toString() + " choice number ${choice} is " + module.toString()
@@ -19,7 +20,7 @@ class Application {
 	}
 	
 	static constraints = {
-		choice(min:1,max:2)
+		choice(inList : [1,2])
 		preference(min:1,max:7)
     }
 }

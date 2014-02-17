@@ -26,8 +26,8 @@ class Student {
 
 
 	static constraints = {
-		surname(blank : false)
-		name(blank : false)
+		surname(blank : false, validator : {return it.matches("[a-zA-Z -]+")})
+		name(blank : false, validator : {return it.matches("[a-zA-Z -]+")})
 
 	}
 }
