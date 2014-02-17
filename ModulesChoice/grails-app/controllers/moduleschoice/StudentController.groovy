@@ -139,7 +139,7 @@ class StudentController {
 	def setChoice(){
 		def _student = Student.findByName(params.user)
 		//TODO check requirement
-		_student.addApplication(params.choice.toInteger(), params.preference.toInteger(), params.module)
+		_student.addApplication(params.choice.toInteger(),-1, params.module)
 		_student.save()
 		render "Creation done"
 		//redirection ajax ???

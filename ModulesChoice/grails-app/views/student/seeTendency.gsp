@@ -37,10 +37,11 @@
 	function drawVisualization() {
 		// Create and populate the data table.
 
-		 var data = google.visualization.arrayToDataTable([
-                                                          ["",'poney (Sequence : 1)',' poneyAdvanced (Sequence : 2)', 'barbe a papa (Sequence : 6)'],
-                                                          [,3, 2, 1]
-                                                         ]);
+		var array = [
+                     ["",'poney (Sequence : 1)',' poneyAdvanced (Sequence : 2)', 'barbe a papa (Sequence : 6)'],
+                     [,3, 2, 1]
+                    ]
+		 var data = google.visualization.arrayToDataTable(array);
 		
 		// Create and draw the visualization.
 		new google.visualization.BarChart(document
