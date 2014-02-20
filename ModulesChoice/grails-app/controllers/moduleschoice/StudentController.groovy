@@ -138,10 +138,25 @@ class StudentController {
 
 	def setChoice(){
 		def _student = Student.findByName(params.user)
+		boolean modif=false
 		//TODO check requirement
-		_student.addApplication(params.choice.toInteger(),-1, params.module)
+		for(Application a: _student.choices){
+			if(a.module.getEnsicaName().equals(params.module)){
+				a.choice=params.choice.toInteger()
+				a.save()
+				modif=true
+			}
+			if(a.module.getSequence()==(Module.findByEnsicaName(params.module)).getSequence()){
+				a.module=Module.findByEnsicaName(params.module)
+				a.save()
+				modif=true
+			}
+		}
+		if(!modif){
+			_student.addApplication(params.choice.toInteger(),0, params.module)
+		}
 		_student.save()
-		render "Creation done"
+		render "Creation done "+modif
 		//redirection ajax ???
 	}
 
@@ -163,5 +178,16 @@ class StudentController {
 		println "\t\t"+params.data.toString()
 		println "new data format"+newData.toString()
 		return params
+	}
+
+	def setPreference(){
+		def student=Student.findByName(params.user)
+		for(Application a : student.choices){
+			if(a.choice==1){
+				a.preference=(params.(a.module.getSequence())).toInteger()
+				a.save()
+			}
+		}
+		render "preference OK"
 	}
 }

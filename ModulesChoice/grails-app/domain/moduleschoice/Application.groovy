@@ -21,6 +21,6 @@ class Application {
 	
 	static constraints = {
 		choice(min:1,max:2)
-		preference(min:1,max:7)
+		preference(min:0,max:7)
     }
 }
