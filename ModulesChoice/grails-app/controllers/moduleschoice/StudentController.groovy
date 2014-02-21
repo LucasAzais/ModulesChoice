@@ -207,4 +207,8 @@ class StudentController {
 		}
 		render "preference OK"
 	}
+	
+	def frontPageStudent(){
+		return
+	}
 }
