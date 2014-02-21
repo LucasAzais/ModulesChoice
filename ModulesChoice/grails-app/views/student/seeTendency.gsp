@@ -35,14 +35,15 @@
 </script>
 <script type="text/javascript">
 	function drawVisualization() {
-		// Create and populate the data table.
 
+		// Create and populate the data table.
 		var array = [
-                     ["",'poney (Sequence : 1)',' poneyAdvanced (Sequence : 2)', 'barbe a papa (Sequence : 6)'],
-                     [,3, 2, 1]
+                     ["",'${params.moduleList[0]}','${params.moduleList[1]}', '${params.moduleList[2]}'],
+                     [ ,${params.data[0]},${params.data[1]}, ${params.data[2]}]
                     ]
-		 var data = google.visualization.arrayToDataTable(array);
-		
+		var data = google.visualization.arrayToDataTable(array);
+
+
 		// Create and draw the visualization.
 		new google.visualization.BarChart(document
 				.getElementById('visualization')).draw(data, {

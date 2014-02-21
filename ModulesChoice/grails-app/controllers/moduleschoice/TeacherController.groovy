@@ -112,7 +112,7 @@ class TeacherController {
 	}
 
 	def exportExcel(){
-		def mod = Module.findByEnsicaName(params.module)
+		def mod = Module.findByTitle(params.module)
 		ArrayList<ArrayList<String>> students = new ArrayList<ArrayList<String>>()
 		ArrayList<String> applicant
 		for(Application a : mod.applications){

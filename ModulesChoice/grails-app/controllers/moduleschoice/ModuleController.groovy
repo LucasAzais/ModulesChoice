@@ -25,9 +25,9 @@ class ModuleController {
 //		}
 //	}
 	
-	def putRequirement(){
-		def module = Module.findByEnsicaName()
-		module.requirements.add(Module.findByEnsicaName(params.module))
-	}
+//	def putRequirement(){
+//		def module = Module.findByEnsicaName()
+//		module.requirements.add(Module.findByEnsicaName(params.module))
+//	}
 }
 

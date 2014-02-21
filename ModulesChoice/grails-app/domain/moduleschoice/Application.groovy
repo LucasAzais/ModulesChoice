@@ -4,11 +4,11 @@ class Application {
 
 	int choice
 	int preference
-	static belongsTo = [student: Student]
-	static hasOne = [module : Module]
+	static belongsTo = [student: Student, module : Module]
+
 	
 	String toString(){
-		student.toString() + "'s choice number ${choice} is " + module.toString()
+		student.toString() + " choice number ${choice} is " + module.toString()
 	}
     
 	String getStudentName(){
@@ -20,7 +20,7 @@ class Application {
 	}
 	
 	static constraints = {
-		choice(min:1,max:2)
-		preference(min:0,max:7)
+		choice(inList : [1,2])
+		preference(min:1,max:7)
     }
 }
