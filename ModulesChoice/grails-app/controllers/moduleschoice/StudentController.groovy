@@ -211,4 +211,8 @@ class StudentController {
 	def frontPageStudent(){
 		return
 	}
+	
+	def choicePage(){
+		return
+	}
 }
