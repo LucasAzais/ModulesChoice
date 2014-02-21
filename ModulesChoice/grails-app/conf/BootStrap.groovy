@@ -7,17 +7,24 @@ class BootStrap {
 	def init = { servletContext ->
 		environments {
 			development {
-				def t1 = new Teacher(surname:'Jurczynski',name:'Thomas', modules : [])
+				
+				def gt = new Teacher(surname:'Yoda',name:'Master',modules:[], allModules:[])
+				gt.save();
+				if(gt.hasErrors()){
+					println gt.errors
+				}
+				
+				def t1 = new Teacher(surname:'Jurczynski',name:'Thomas', modules : [], allModules: [])
 				t1.save();
 				if(t1.hasErrors()){
 					println t1.errors
 				}
-				def t2 = new Teacher(surname:'The White',name:'Gandalf',modules : [])
+				def t2 = new Teacher(surname:'The White',name:'Gandalf',modules : [], allModules:[])
 				t2.save();
 				if(t2.hasErrors()){
 					println t2.errors
 				}
-				def t3 = new Teacher(surname: 'Sidius',name: 'Darth',modules : [])
+				def t3 = new Teacher(surname: 'Sidius',name: 'Darth',modules : [], allModules:[])
 				t3.save();
 				if(t3.hasErrors()){
 					println t3.errors
@@ -39,17 +46,17 @@ class BootStrap {
 					println s3.errors
 				}
 
-				def m1 = new Module(title:'How to become a God',sequence:1,department:'MGM',ensicaName:'4-1MGM11',description:'I can help you',headTeacher:t1)
+				def m1 = new Module(title:'How to become a God',sequence:1,department:'MGM',ensicaName:'4-1MGM11',description:'I can help you',headTeacher:t1, generalTeacher:gt)
 				m1.save()
 				if(m1.hasErrors()){
 					println m1.errors
 				}
-				def m2 = new Module(title:'The Dark Side of The Force',sequence:2,department:'MMF',ensicaName:'4-2MMF21',description:'Raise your anger, my apprentice',headTeacher:t2)
+				def m2 = new Module(title:'The Dark Side of The Force',sequence:2,department:'MMF',ensicaName:'4-2MMF21',description:'Raise your anger, my apprentice',headTeacher:t2, generalTeacher: gt)
 				m2.save()
 				if(m2.hasErrors()){
 					println m2.errors
 				}
-				def m3 = new Module(title:'The Two Towers',sequence:3,department:'MIN',ensicaName:'4-3MIN31',description:'We will crush the Rohan',headTeacher:t3 )
+				def m3 = new Module(title:'The Two Towers',sequence:3,department:'MIN',ensicaName:'4-3MIN31',description:'We will crush the Rohan',headTeacher:t3, generalTeacher: gt )
 				m3.save()
 				if(m3.hasErrors()){
 					println m3.errors

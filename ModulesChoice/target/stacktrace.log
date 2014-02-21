@@ -19530,3 +19530,516 @@ java.lang.NullPointerException: Cannot invoke method add() on null object
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:41,924 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 22 more
+2014-02-21 13:49:41,934 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:41,934 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:41,934 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:41,934 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:41,934 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,024 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,024 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:42,024 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:49:42,034 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 22 more
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:53:58,567 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:53:58,647 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [modules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [modules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1455)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	... 22 more
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationshipForCollection(DefaultGrailsDomainClass.java:362)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.establishRelationships(DefaultGrailsDomainClass.java:261)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsDomainClass.<init>(DefaultGrailsDomainClass.java:119)
+	at org.codehaus.groovy.grails.commons.DomainClassArtefactHandler.newArtefactClass(DomainClassArtefactHandler.java:50)
+	at org.codehaus.groovy.grails.commons.AnnotationDomainClassArtefactHandler.newArtefactClass(AnnotationDomainClassArtefactHandler.java:53)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:809)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.addArtefact(DefaultGrailsApplication.java:535)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.configureLoadedClasses(DefaultGrailsApplication.java:260)
+	at org.codehaus.groovy.grails.commons.DefaultGrailsApplication.initialise(DefaultGrailsApplication.java:740)
+	at org.codehaus.groovy.grails.plugins.GrailsPluginManagerFactoryBean.afterPropertiesSet(GrailsPluginManagerFactoryBean.java:123)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:456)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:294)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:225)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:291)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:589)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:925)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:472)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:388)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:293)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoader.initWebApplicationContext(GrailsContextLoader.java:69)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:111)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4939)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5434)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:56:48,732 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014-02-21 13:56:48,812 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pluginManager' defined in ServletContext resource [/WEB-INF/applicationContext.xml]: Invocation of init method failed; nested exception is org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.codehaus.groovy.grails.exceptions.GrailsDomainException: Property [allModules] in class [class moduleschoice.Teacher] is a bidirectional one-to-many with two possible properties on the inverse side. Either name one of the properties on other side of the relationship [teacher] or use the 'mappedBy' static to define the property that the relationship is mapped with. Example: static mappedBy = [allModules:'myprop']
+	... 4 more

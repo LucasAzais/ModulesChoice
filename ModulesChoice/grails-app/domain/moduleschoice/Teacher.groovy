@@ -4,7 +4,9 @@ class Teacher {
 	
 	String name
 	String surname
-	static hasMany = [modules : Module]
+	static hasMany = [modules : Module,allModules: Module]
+	static mappedBy = [modules:'headTeacher',allModules:'generalTeacher']
+	
 
 	String toString(){
 		"$surname" + " $name"

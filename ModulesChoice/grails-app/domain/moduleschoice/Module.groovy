@@ -9,9 +9,9 @@ class Module {
 	String description
 	String department
 	String ensicaName
-	List<Module> requirements = new ArrayList<Module>()
-	static hasMany = [applications : Application]
-	static belongsTo = [headTeacher : Teacher]
+	static hasMany = [applications : Application,requirements: Module]
+	static belongsTo = [headTeacher : Teacher, generalTeacher : Teacher]
+	static mappedBy = [headTeacher:'modules',generalTeacher:'allModules']
 	
 	Module(String _title, int _sequence, String _department, String _ensicaName,String _description, Teacher _t){
 		title = _title
@@ -42,7 +42,7 @@ class Module {
 		department(inList : ["MAS","MIN","MGM","MMF"])
 		ensicaName(blank:false, validator : {return (it.matches("[0-9]+-[0-9]+[A-Z ]+[0-9]+")&&(Module.findAllByEnsicaName(it).size()==0))}) 
 		description(blank : false)
-		requirements(maxSize : 6)
+		
 				
     }
 }
