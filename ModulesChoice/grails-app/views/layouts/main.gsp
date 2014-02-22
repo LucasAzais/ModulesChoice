@@ -18,7 +18,7 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div>
+		<div id="grailsLogo" role="banner" align="center"><a><img src="${resource(dir: 'images', file: 'isae.jpg')}" alt="Grails"/></a></div>
 		<g:render template="/layouts/header"/>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
