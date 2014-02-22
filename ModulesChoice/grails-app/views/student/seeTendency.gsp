@@ -1,31 +1,8 @@
-<h1>SeeTendency:</h1>
-<p>
-	${params.newData}
-</p>
-<table border="1" style="width: 300px">
-	<thead>
-		<tr>
-			<g:each in="${params.moduleList}">
-				<th>
-					${it.toString()}
-				</th>
-			</g:each>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<g:each in="${params.data}">
-				<td>
-					${it.toString()}
-				</td>
-			</g:each>
-		</tr>
-	</tbody>
-</table>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta name="layout" content="main" />
+<title>Tendency</title>
 
 <script type="text/javascript" src="//www.google.com/jsapi"></script>
 <script type="text/javascript">
@@ -58,8 +35,59 @@
 
 	google.setOnLoadCallback(drawVisualization);
 </script>
+<style>
+table,th,td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th,td {
+	padding: 5px;
+}
+</style>
 </head>
 <body style="font-family: Arial; border: 0 none;">
-	<div id="visualization" style="width: 600px; height: 400px;"></div>
+	<h1>Have a look at the tendencies</h1>
+	<div align="center">
+		<table border="1" style="width: 300px">
+			<thead>
+				<tr>
+					<g:each in="${params.moduleList}">
+						<th>
+							${it.toString()}
+						</th>
+					</g:each>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<g:each in="${params.data}">
+						<td>
+							${it.toString()}
+						</td>
+					</g:each>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="visualization" style="width: 600px; height: 400px;"></div>
+	</div>
+	<div class="nav" role="navigation">
+
+		<fieldset class="buttons">
+			<ul>
+				<li>
+					<g:form action="frontPageStudent" method="post">
+						<input type="submit" value="Return">
+					</g:form>
+				</li>
+				<li>
+					<g:form action="choicePage" method="post">
+						<input type="submit" value="See the descriptions of module">
+					</g:form>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
 </body>
 </html>

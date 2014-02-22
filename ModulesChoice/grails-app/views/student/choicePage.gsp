@@ -8,5 +8,28 @@
 <body>
 	<h1> Choices</h1>
 	<div class="body"></div>
+	
+	<div class="nav role="navigation">
+		<fieldset class="buttons">
+			<ul>
+				<li>
+					<g:form action="frontPageStudent" method="post">
+						<input type="submit" value="Return">
+					</g:form>
+				</li>
+				<li>
+					<g:form action="seeTendency" method="post">
+						<input type="submit" value="See the tendencies">
+					</g:form>
+				</li>
+				<li>
+					<g:form action="choicePage" method="post">
+						<input type="submit" value="See the descriptions of module">
+					</g:form>
+				</li>
+			</ul>
+		</fieldset>
+	</div>
+	
 </body>
 </html>

@@ -123,7 +123,7 @@ class TeacherController {
 			applicant.add(a.preference.toString())
 			students.add(applicant)
 		}
-		
+
 		HSSFWorkbook workbook = new HSSFWorkbook();
 		HSSFSheet sheet = workbook.createSheet(params.module+" Candidatures");
 
@@ -177,9 +177,9 @@ class TeacherController {
 		for(int i=0;i<students.size();i++){
 			HSSFRow row2 = sheet.createRow(3+i);
 			for(int j=0;j<4;j++) {
-			Cell cell = row2.createCell(j);
-			cell.setCellValue(students.get(i).get(j));
-			cell.setCellStyle(style2);
+				Cell cell = row2.createCell(j);
+				cell.setCellValue(students.get(i).get(j));
+				cell.setCellStyle(style2);
 			}
 		}
 		sheet.autoSizeColumn(0);
@@ -210,5 +210,12 @@ class TeacherController {
 		response.outputStream << file.newInputStream()
 	}
 
-	
+	def frontPageTeacher(){
+		return
 	}
+
+	def reviewResultsPage(){
+		return
+	}
+
+}
